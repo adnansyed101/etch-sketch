@@ -1,12 +1,15 @@
 const boxContainer = document.querySelector(".box-container");
 
 function createGrid(blockNum) {
-  const flexBasis = 100 / blockNum;
-  for (let i = 1; i <= blockNum ** 2; i++) {
-    const box = document.createElement("div");
-    box.classList = "box";
-    boxContainer.appendChild(box);
-    box.style.flexBasis = `${flexBasis}%`;
+  boxContainer.innerHTML = "";
+  for (let i = 0; i < blockNum; i++) {
+    const rowDiv = document.createElement("div");
+    for (let j = 0; j < blockNum; j++) {
+      const box = document.createElement("div");
+      box.classList = "box";
+      rowDiv.append(box);
+    }
+    boxContainer.appendChild(rowDiv);
   }
 }
 
