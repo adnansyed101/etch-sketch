@@ -1,6 +1,6 @@
 const boxContainer = document.querySelector(".box-container");
 
-function main(blockNum) {
+function createGrid(blockNum) {
   const flexBasis = 100 / blockNum;
   for (let i = 1; i <= blockNum ** 2; i++) {
     const box = document.createElement("div");
@@ -10,4 +10,8 @@ function main(blockNum) {
   }
 }
 
-main(16);
+function main() {
+  createGrid(16);
+}
+
+main();
