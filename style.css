@@ -11,7 +11,10 @@
   padding: 20px;
 }
 
-
 .box:hover {
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.blackBox {
+  background-color: black;
 }
