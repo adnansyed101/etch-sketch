@@ -10,8 +10,17 @@ function createGrid(blockNum) {
   }
 }
 
+function toggleBoxColor(box) {
+  box.classList.toggle("blackBox");
+}
+
 function main() {
   createGrid(16);
+
+  const boxes = document.querySelectorAll(".box");
+  boxes.forEach((box) => {
+    box.addEventListener("click", (e) => toggleBoxColor(e.target));
+  });
 }
 
 main();
