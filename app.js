@@ -1,4 +1,5 @@
 const boxContainer = document.querySelector(".box-container");
+const numOfBox = prompt("Enter number of boxes with 2 and 100");
 
 function createGrid(blockNum) {
   boxContainer.innerHTML = "";
@@ -18,7 +19,12 @@ function toggleBoxColor(box) {
 }
 
 function main() {
-  createGrid(16);
+  if (numOfBox <= 100 && numOfBox >= 2) {
+    createGrid(numOfBox);
+  } else {
+    alert("Number of boxes must be within 2 and 100");
+    createGrid(16);
+  }
 
   const boxes = document.querySelectorAll(".box");
   boxes.forEach((box) => {
