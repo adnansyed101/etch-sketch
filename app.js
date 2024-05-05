@@ -1,5 +1,11 @@
 const boxContainer = document.querySelector(".box-container");
 let numOfBox = prompt("Enter number of boxes within 2 and 100");
+const createGridBtn = document.querySelector("#createGridBtn");
+
+createGridBtn.addEventListener("click", () => {
+  numOfBox = prompt("Enter number of boxes within 2 and 100");
+  main();
+});
 
 function createGrid(blockNum) {
   boxContainer.innerHTML = "";
@@ -23,7 +29,6 @@ function main() {
     createGrid(numOfBox);
   } else {
     alert("Number of boxes must be within 2 and 100");
-    createGrid(16);
   }
 
   const boxes = document.querySelectorAll(".box");
