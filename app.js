@@ -1,5 +1,5 @@
 const boxContainer = document.querySelector(".box-container");
-const numOfBox = prompt("Enter number of boxes within 2 and 100");
+let numOfBox = prompt("Enter number of boxes within 2 and 100");
 
 function createGrid(blockNum) {
   boxContainer.innerHTML = "";
