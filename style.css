@@ -11,9 +11,9 @@
 }
 
 .box:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
 .blackBox {
-  background-color: black;
+  background-color: black !important;
 }
